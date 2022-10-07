@@ -1,4 +1,5 @@
 package com.SatckQueueProblem;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -10,7 +11,7 @@ public class Stack {
         this.top = null;
     }
 
-    // insert at Start
+    // insert at start of List
     public void push(int x) {
         Node node = new Node();
         node.data = x;
@@ -18,12 +19,12 @@ public class Stack {
         top = node;
     }
 
-    // check stack 
+    // check stack is empty
     public boolean isEmpty() {
         return top == null;
     }
 
-    // print nodes 
+    // print nodes of list
     void showStack() {
 
         Node temp = top;
@@ -38,7 +39,7 @@ public class Stack {
         }
     }
 
-    // print top element
+    // do not pop only print top element
     public int peek() {
         if (isEmpty()) {
             System.out.println("The stack is empty");
@@ -47,7 +48,7 @@ public class Stack {
         return top.data;
     }
 
-    //  pop a top element from the stack
+    // function to pop a top element from the stack
     public int pop() {
         if (isEmpty()) {
             System.out.println("Stack Underflow");
